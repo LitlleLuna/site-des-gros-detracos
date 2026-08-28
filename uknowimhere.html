@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px 20px;
+        background-color: #111;
+        color: #eee;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        max-width: 1200px;
+        width: 100%;
+      }
+
+      main > p,
+      main > br {
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+        margin: 20px 0 10px;
+        text-align: center;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+      }
+
+      .gallery img {
+        cursor: zoom-in;
+        transition: transform 0.15s ease;
+      }
+
+      .gallery img:hover {
+        transform: scale(1.03);
+      }
+
+      .lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.9);
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        cursor: zoom-out;
+        padding: 20px;
+      }
+
+      .lightbox.active {
+        display: flex;
+      }
+
+      .lightbox img {
+        max-width: 95vw;
+        max-height: 95vh;
+        object-fit: contain;
+        border-radius: 6px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+      }
+
+      .lightbox-close {
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        font-size: 2.5rem;
+        color: #eee;
+        cursor: pointer;
+        line-height: 1;
+      }
+
+      /* Copie d'écran = captures d'écran d'ordinateur (format large) */
+      .capture-ecran {
+        width: 480px;
+        height: 300px;
+        object-fit: contain;
+        background: #000;
+        border: 1px solid #333;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      /* fichier copié + screenshots discord = captures d'écran de téléphone (format portrait) */
+      .capture-telephone {
+        width: 220px;
+        height: 440px;
+        object-fit: contain;
+        background: #000;
+        border: 1px solid #333;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .video-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+      }
+
+      video {
+        max-width: 800px;
+        width: 100%;
+        border: 1px solid #333;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+
+      <p class="section-title">Photos</p>
+      si c'est trop petit ce qui est surement le cas vu que devine quoi j'ai essayé avant de le mettre ici bas tu clique sur les image et elle s'agrandisse c'est pas de la magie c'est js et oui ça c'est ecrit a l'arache et alors tu vas faire quoi ? hein vas y je t'attend
+
+      <div class="gallery">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_110012.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200731.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200744.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200750.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200755.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200800.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200806.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200815.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200820.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200826.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200833.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200840.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200846.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200852.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200856.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200901.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200906.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200911.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200917.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260109_200922.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260125_224155.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260126_230251.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260127_075558.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260127_075608.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260127_075615.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260127_075621.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260127_075629.png" alt="">
+        <img class="capture-ecran" src="uknowimhereforsomething/Copie d'écran_20260127_075634.png" alt="">
+
+        <img class="capture-telephone" src="uknowimhereforsomething/Screenshot_20260106_222431_com.discord.jpg" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/Screenshot_20260106_222651_com.discord.jpg" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/Screenshot_20260106_222907_com.discord.jpg" alt="">
+
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié2.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié3.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié4.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié5.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié6.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié7.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié8.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié9.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié10.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié11.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié12.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié13.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié14.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié15.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié16.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié17.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié18.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié19.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié20.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié21.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié22.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié23.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié24.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié25.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié26.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié27.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié28.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié29.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/fichier copié30.png" alt="">
+        <img class="capture-telephone" src="uknowimhereforsomething/telecharger_1.png" alt="">
+      </div>
+
+      <p class="section-title">Vidéos</p>
+
+      <div class="video-wrapper">
+        <video src="uknowimhereforsomething/VID_20260106_224720.mp4" controls></video>
+        <video src="uknowimhereforsomething/2026-01-06 22-49-18.mp4" controls></video>
+        <video src="uknowimhereforsomething/2026-01-09 18-41-07.mp4" controls></video>
+        <video src="uknowimhereforsomething/2026-01-26 23-05-23.mp4" controls></video>
+      </div>
+
+    </main>
+    <footer></footer>
+
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img src="" alt="">
+    </div>
+
+    <script>
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('img');
+
+      document.querySelectorAll('.gallery img').forEach(img => {
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src;
+          lightbox.classList.add('active');
+        });
+      });
+
+      lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          lightbox.classList.remove('active');
+          lightboxImg.src = '';
+        }
+      });
+    </script>
+  </body>
+</html>

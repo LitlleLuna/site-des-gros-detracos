@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+        <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px 20px;
+        background-color: #111;
+        color: #eee;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        max-width: 1600px;
+        width: 100%;
+      }
+
+      main > p,
+      main > br {
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+        margin: 20px 0 10px;
+        text-align: center;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+      }
+
+      /* Copie d'écran = captures d'écran d'ordinateur (format large) */
+      .capture-ecran {
+        width: 480px;
+        height: 300px;
+        object-fit: contain;
+        background: #000;
+        border: 1px solid #333;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      /* fichier copié + screenshots discord = captures d'écran de téléphone (format portrait) */
+      .capture-telephone {
+        width: 300px;
+        height: 600px;
+        object-fit: contain;
+        background: #000;
+        border: 1px solid #333;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .video-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+      }
+
+      video {
+        max-width: 800px;
+        width: 100%;
+        border: 1px solid #333;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+       p {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .liens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    background: #1c1c1c;
+    color: #eee;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border: 1px solid #333;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  a:hover {
+    background-color: #2a2a2a;
+    transform: translateY(-2px);
+  }
+
+  .lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.9);
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        cursor: zoom-out;
+        padding: 20px;
+      }
+
+      .lightbox.active {
+        display: flex;
+      }
+
+      .lightbox img {
+        max-width: 95vw;
+        max-height: 95vh;
+        object-fit: contain;
+        border-radius: 6px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+      }
+
+      .lightbox-close {
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        font-size: 2.5rem;
+        color: #eee;
+        cursor: pointer;
+        line-height: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="liens">
+      <a href="home.html">home je suis gentil j'ai fait un lien</a>
+    </div>
+      <p class="section-title">Photos</p>
+        si c'est trop petit ce qui est surement le cas vu que devine quoi j'ai essayé avant de le mettre ici bas tu clique sur les image et elle s'agrandisse c'est pas de la magie c'est js et oui ça c'est ecrit a l'arache et alors tu vas faire quoi ? hein vas y je t'attend.. il y a 2 point et TOC.
+      <div class="gallery">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 031325.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 031320.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 031906.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 032226.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 032517.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 032526.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 032935.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 033438.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 033443.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 033450.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 033528.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 033634.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 033722.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 033811.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 034300.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 034831.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 035126.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 035133.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 035209.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 035600.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 035605.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 035927.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 035958.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 041335.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 041341.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 041346.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 041350.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 041820.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 041919.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 042103.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 042645.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 042650.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 044837.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 044958.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 045027.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 045111.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 045250.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 045430.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 045624.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 045646.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 045714.png" alt="">
+        <img class="capture-ecran" src="fougedin/Capture d'écran 2026-08-20 045753.png" alt="">
+        <img class="capture-telephone" src="fougedin/image.png" alt="">
+      </div>
+
+      <p class="section-title">Vidéos</p>
+            j'ai mis video mais c'est surtout du sons et oui il y a des fautes de frappe flemme de corriger (ps: j'avais ecrit frappe phrappe j'ai quand même corriger je suis pas un monstre)
+
+
+      <div class="video-wrapper">
+        <video src="fougedin/20260820-0212-24.0746769.mp4" controls></video>
+        <video src="fougedin/20260820-0217-10.0364590.mp4" controls></video>
+      </div>
+
+
+
+    </main>
+        
+
+    <footer></footer>
+        <div class="lightbox" id="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img src="" alt="">
+    </div>
+    <script>
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('img');
+ 
+      document.querySelectorAll('.gallery img').forEach(img => {
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src;
+          lightbox.classList.add('active');
+        });
+      });
+ 
+      lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+      });
+ 
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          lightbox.classList.remove('active');
+          lightboxImg.src = '';
+        }
+      });
+    </script>
+
+  </body>
+</html>

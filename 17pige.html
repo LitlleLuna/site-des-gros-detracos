@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+        <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 40px 20px;
+        background-color: #111;
+        color: #eee;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        max-width: 1600px;
+        width: 100%;
+      }
+
+      main > p,
+      main > br {
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 1.4rem;
+        margin: 20px 0 10px;
+        text-align: center;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+      }
+
+      /* Copie d'écran = captures d'écran d'ordinateur (format large) */
+      .capture-ecran {
+        width: 480px;
+        height: 300px;
+        object-fit: contain;
+        background: #000;
+        border: 1px solid #333;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      /* fichier copié + screenshots discord = captures d'écran de téléphone (format portrait) */
+      .capture-telephone {
+        width: 300px;
+        height: 600px;
+        object-fit: contain;
+        background: #000;
+        border: 1px solid #333;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .video-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+      }
+
+      video {
+        max-width: 800px;
+        width: 100%;
+        border: 1px solid #333;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      }
+       p {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .liens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    background: #1c1c1c;
+    color: #eee;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border: 1px solid #333;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  a:hover {
+    background-color: #2a2a2a;
+    transform: translateY(-2px);
+  }
+
+  .lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.9);
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        cursor: zoom-out;
+        padding: 20px;
+      }
+
+      .lightbox.active {
+        display: flex;
+      }
+
+      .lightbox img {
+        max-width: 95vw;
+        max-height: 95vh;
+        object-fit: contain;
+        border-radius: 6px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+      }
+
+      .lightbox-close {
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        font-size: 2.5rem;
+        color: #eee;
+        cursor: pointer;
+        line-height: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="liens">
+      <a href="home.html">home je suis gentil j'ai fait un lien</a>
+    </div>
+      <p class="section-title">Photos</p>
+        si c'est trop petit ce qui est surement le cas vu que devine quoi j'ai essayé avant de le mettre ici bas tu clique sur les image et elle s'agrandisse c'est pas de la magie c'est js et oui ça c'est ecrit a l'arache et alors tu vas faire quoi ? hein vas y je t'attend
+
+        je veux pas spoil mais il y a des propale chelou (BDSM, Nourriture, Viol etc la classique quoi)
+        
+        <div class="gallery">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_071327.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_071344.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_071356.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_071405.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_071416.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_071424.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_071432.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_071450.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_071455.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_071520.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_071817.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_072750.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_072910.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_073431.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_075737.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_075746.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_075752.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_082523.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_091607.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_091618.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_091626.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_100250.png" alt="">
+        <img class="capture-ecran" src="17/Copie d'écran_20260827_100304.png" alt="">
+        
+      </div>
+
+      <p class="section-title">Vidéos</p>
+
+      <div class="video-wrapper">
+        <video src="17/20260827_072630.mp4" controls></video>
+        <video src="17/56674B64-F386-47F1-B168-FD99B0A4B123.mp4" controls></video>
+        <video src="17/664417E6-6583-4C5D-983D-C071FE29ED60.mp4" controls></video>
+        <video src="17/Enregistrement-d_écran_20260827_071045.mp4" controls></video>
+      </div>
+
+
+
+    </main>
+        
+
+    <footer></footer>
+        <div class="lightbox" id="lightbox">
+      <span class="lightbox-close">&times;</span>
+      <img src="" alt="">
+    </div>
+    <script>
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('img');
+ 
+      document.querySelectorAll('.gallery img').forEach(img => {
+        img.addEventListener('click', () => {
+          lightboxImg.src = img.src;
+          lightbox.classList.add('active');
+        });
+      });
+ 
+      lightbox.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+      });
+ 
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          lightbox.classList.remove('active');
+          lightboxImg.src = '';
+        }
+      });
+    </script>
+
+  </body>
+</html>
